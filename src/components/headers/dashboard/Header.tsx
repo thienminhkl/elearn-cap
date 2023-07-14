@@ -25,14 +25,20 @@ export default function Header() {
         <>
           {isDesktop && (
             <Stack direction={'row'} alignItems="center">
-              <LocalLibraryRoundedIcon sx={{ fontSize: '2rem' }} />
-              <Typography variant="h4" sx={{ mr: 2.5, ml: 0.5 }}>
-                Elearning
-              </Typography>
+              <IconButton href="/" sx={{ color: 'white' }}>
+                <LocalLibraryRoundedIcon sx={{ fontSize: '2rem' }} />
+                <Typography variant="h4" sx={{ mr: 2.5, ml: 0.5 }}>
+                  Elearning
+                </Typography>
+              </IconButton>
             </Stack>
           )}
 
-          {!isDesktop && <LocalLibraryRoundedIcon sx={{ mr: 1.5 }} />}
+          {!isDesktop && (
+            <IconButton href="/" sx={{ color: 'white' }}>
+              <LocalLibraryRoundedIcon sx={{ mr: 1.5 }} />
+            </IconButton>
+          )}
           <Category />
           <SearchBar />
           {isLogin ? (
