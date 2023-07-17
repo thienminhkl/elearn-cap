@@ -4,7 +4,7 @@ import { UpdateFormValuesProps } from '~/components/profile/ProfileUser';
 import { ACCESS_TOKEN, CYBER_TOKEN, PROFILE_DATA } from '~/const/const';
 import { LogFormValuesProps } from '~/pages/Login/Login';
 import { RegisFormValuesProps } from '~/pages/Register/Register';
-import { Course, CourseDetail } from '~/type/course/course';
+import { CourseDetail } from '~/type/course/course';
 import { UserProfile } from '~/type/user/user';
 import { deleteLocalStrgKey, getLocal, setLocal } from '~/untils/localStogate';
 
@@ -67,8 +67,7 @@ export function handleGetProfile() {
       console.error(error);
     }
   };
-}
-
+};
 export function handleLogin(
   data: LogFormValuesProps,
   navigate: (nav: string)  => void,
@@ -94,8 +93,7 @@ export function handleLogin(
       handleSetError(error)
     }
   };
-}
-
+};
 export function handleRegister(
   data: RegisFormValuesProps,
   navigate: (nav: string)  => void,
@@ -123,7 +121,7 @@ export function handleRegister(
       handleSetError(error)
     }
   };
-}
+};
 export function handleUpdateUserProfile(
   data: UpdateFormValuesProps,
   restVal: {
@@ -167,8 +165,7 @@ export function handleUpdateUserProfile(
       handleSetError(error)
     }
   };
-}
-
+};
 export function handleUnregistrationCourse(
   data: UserProfile | null | undefined, 
   id: string | undefined
