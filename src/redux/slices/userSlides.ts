@@ -115,7 +115,7 @@ export function handleRegister(
         }
       });
       alert('Đăng ký thành công');
-      navigate('/login');
+      navigate('/DangNhap');
     } catch (error) {
       console.error(error);
       handleSetError(error)

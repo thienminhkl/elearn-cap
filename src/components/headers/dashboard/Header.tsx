@@ -44,11 +44,11 @@ export default function Header() {
           <Category />
           <SearchBar />
           {!isLoggedIn ? (
-            <IconButton href="/login">
+            <IconButton href="/DangNhap">
               <LoginRoundedIcon />
             </IconButton>
           ) : (
-            <ProfileSetting name={userProfile?.hoTen} />
+            <ProfileSetting data={userProfile} />
           )}
         </>
       </Toolbar>

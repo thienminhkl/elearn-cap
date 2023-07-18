@@ -24,7 +24,7 @@ function Profile() {
 
   useEffect(() => {
     if (!isLoggedIn) {
-      navigate('/login');
+      navigate('/DangNhap');
     }
   }, [isLoggedIn, navigate]);
 
