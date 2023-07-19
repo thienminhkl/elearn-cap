@@ -42,7 +42,7 @@ export default function Header() {
             </IconButton>
           )}
           <Category />
-          <SearchBar />
+          <SearchBar labelSearch={'Tìm kiếm khóa học...'} />
           {!isLoggedIn ? (
             <IconButton href="/DangNhap">
               <LoginRoundedIcon />

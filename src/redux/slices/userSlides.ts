@@ -24,7 +24,7 @@ const initialState: ProfileData = {
 
 
 const slice = createSlice({
-  name: 'product',
+  name: 'user',
   initialState,
   reducers: {
     login(state, action) {
