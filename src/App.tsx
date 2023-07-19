@@ -25,8 +25,9 @@ export function App() {
         </Route>
         <Route path="DangKy" element={<Register />} />
       </Route>
-      <Route path="/" element={<AdminPlate />}>
-        <Route path="admin" element={<Admin />} />
+      <Route path="admin" element={<AdminPlate />}>
+        <Route path="QuanLyNguoiDung" element={<ControlUser />} />
+        <Route path="QuanLyKhoaHoc" element={<ControlCourse />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
@@ -52,3 +53,5 @@ const Register = lazy(() => import('./pages/Register/Register'));
 const Courses = lazy(() => import('./pages/CoursesCatalog/CoursesCatalog'));
 const Admin = lazy(() => import('./pages/Admin/Admin'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
+const ControlCourse = lazy(() => import('./pages/Admin/ControlCourse'));
+const ControlUser = lazy(() => import('./pages/Admin/ControlUser'));
