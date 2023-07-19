@@ -41,7 +41,7 @@ export function handleGetListCourse() {
   return async (dispatch: Dispatch) => {
     try {
       const resp = await axios({
-        url: 'https://elearningnew.cybersoft.edu.vn/api/QuanLyNguoiDung/LayDanhSachNguoiDung',
+        url: 'https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc',
         method: 'get',
         headers: {
           TokenCybersoft: ` ${CYBER_TOKEN}`,
@@ -62,7 +62,7 @@ export function handleDeleteCourse(
     try {
       if(window.confirm('Bạn có muốn xóa khóa học này không?')){
         await axios({
-          url: `https://elearningnew.cybersoft.edu.vn/api/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${id}`,
+          url: `https://elearningnew.cybersoft.edu.vn/api/QuanLyNguoiDung/XoaKhoaHoc?MaKhoaHoc=${id}`,
           method: 'delete',
           headers: {
             TokenCybersoft: ` ${CYBER_TOKEN}`,

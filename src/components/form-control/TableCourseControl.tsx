@@ -10,7 +10,7 @@ import * as React from 'react';
 import { useSelector } from 'react-redux';
 import MenuButton from '~/components/form-control/MenuButton';
 import { RootState } from '~/redux/store';
-import { CourseList } from '~/type/course/course';
+import { Course } from '~/type/course/course';
 
 interface Column {
   id: string;
@@ -55,7 +55,7 @@ const columns: Column[] = [
 
 export default function TableCourseControl() {
   const { listCourses } = useSelector((state: RootState) => state.course);
-  const [rows, setRows] = React.useState<CourseList>([]);
+  const [rows, setRows] = React.useState<Course[]>([]);
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -99,7 +99,7 @@ export default function TableCourseControl() {
             {rows
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row, index) => (
-                <TableRow hover tabIndex={-1} key={index}>
+                <TableRow hover key={index}>
                   <TableCell sx={{ fontSize: '1.6rem' }} align="center">
                     {index + 1 + page * rowsPerPage}
                   </TableCell>
@@ -110,13 +110,13 @@ export default function TableCourseControl() {
                     {row.tenKhoaHoc}
                   </TableCell>
                   <TableCell align="left" sx={{ fontSize: '1.6rem' }}>
-                    {row.hinhAnh}
+                    _
                   </TableCell>
                   <TableCell align="left" sx={{ fontSize: '1.6rem' }}>
                     {row.luotXem}
                   </TableCell>
                   <TableCell align="left" sx={{ fontSize: '1.6rem' }}>
-                    {row.ngayTao}
+                    {row.nguoiTao.hoTen}
                   </TableCell>
                   <TableCell align="center">
                     <MenuButton id={row.maKhoaHoc} />
