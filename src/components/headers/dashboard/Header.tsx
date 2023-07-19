@@ -48,7 +48,7 @@ export default function Header() {
               <LoginRoundedIcon />
             </IconButton>
           ) : (
-            <ProfileSetting name={userProfile?.hoTen} />
+            <ProfileSetting data={userProfile} />
           )}
         </>
       </Toolbar>
