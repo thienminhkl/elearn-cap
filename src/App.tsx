@@ -51,7 +51,6 @@ const Detail = lazy(() => import('./pages/Detail/Detail'));
 const Search = lazy(() => import('./pages/Search/Search'));
 const Register = lazy(() => import('./pages/Register/Register'));
 const Courses = lazy(() => import('./pages/CoursesCatalog/CoursesCatalog'));
-const Admin = lazy(() => import('./pages/Admin/Admin'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 const ControlCourse = lazy(() => import('./pages/Admin/ControlCourse'));
 const ControlUser = lazy(() => import('./pages/Admin/ControlUser'));

@@ -1,7 +1,7 @@
 //react
 import { Stack } from '@mui/system';
 import React, { Fragment, Suspense, useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Drawer from '~/components/drawer/Drawer';
 //component
 import Footer from '~/components/footers/admin/Footer';
@@ -18,11 +18,14 @@ function AdminPlate() {
   const handleDrawerToggle = () => {
     setOpen(!open);
   };
+  const location = useLocation();
 
   useEffect(() => {
-    navigate('/admin/QuanLyNguoiDung');
+    if (location.pathname.includes('QuanLyNguoiDung')) {
+      navigate('/admin/QuanLyNguoiDung');
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [location]);
 
   return (
     <Fragment>

@@ -4,6 +4,7 @@ export const CYBER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJ
 export const ACCESS_TOKEN = 'accessToken';
 export const PROFILE_DATA = 'profileData';
 export const LIST_USER = 'listUser';
+export const LIST_COURSE = 'listCourse';
 
 export const defaultTheme = createTheme({
   components: {
