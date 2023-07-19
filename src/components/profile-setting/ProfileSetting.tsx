@@ -22,8 +22,8 @@ type Props = {
 };
 
 const settingsDash = [
-  { label: 'Người dùng', nav: '/profile' },
-  { label: 'Đăng xuất', nav: '/login' },
+  { label: 'Người dùng', nav: '/HoSo' },
+  { label: 'Đăng xuất', nav: '/DangNhap' },
 ];
 
 const settingsAd = [
@@ -47,7 +47,7 @@ function ProfileSetting({ data }: Props) {
   };
 
   const handleNav = (nav: string) => {
-    if (nav === '/login') {
+    if (nav === '/DangNhap') {
       dispatch(logout());
     }
     setAnchorElUser(null);

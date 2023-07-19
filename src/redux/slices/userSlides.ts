@@ -87,7 +87,7 @@ export function handleLogin(
       setLocal(ACCESS_TOKEN, resp.data.accessToken);      
       dispatch(handleGetProfile());
       alert('Đăng nhập thành công');
-      navigate('/profile');
+      navigate('/HoSo');
     } catch (error) {
       console.error(error);
       handleSetError(error)
@@ -115,7 +115,7 @@ export function handleRegister(
         }
       });
       alert('Đăng ký thành công');
-      navigate('/login');
+      navigate('/DangNhap');
     } catch (error) {
       console.error(error);
       handleSetError(error)

@@ -12,18 +12,18 @@ export function App() {
     <Routes>
       <Route path="" element={<HomePlate />}>
         <Route index element={<Home />} />
-        <Route path="login" element={<Login />} />
+        <Route path="DangNhap" element={<Login />} />
         <Route path="TimKiemKhoaHoc">
           <Route path=":TenKhoaHoc" element={<Search />} />
         </Route>
-        <Route path="profile" element={<Profile />} />
+        <Route path="HoSo" element={<Profile />} />
         <Route path="ChiTiet">
           <Route path=":MaKhoaHoc" element={<Detail />} />
         </Route>
         <Route path="DanhMucKhoaHoc">
           <Route path=":MaDanhMuc" element={<Courses />} />
         </Route>
-        <Route path="register" element={<Register />} />
+        <Route path="DangKy" element={<Register />} />
       </Route>
       <Route path="/" element={<AdminPlate />}>
         <Route path="admin" element={<Admin />} />
